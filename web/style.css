@@ -107,3 +107,9 @@ main { max-width: 1240px; margin: 0 auto; padding: 24px 16px 48px; }
 .ask { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
 .ask input { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--bg); }
 .error { color: #dc2626; }
+.static-note { background: var(--accent-soft); border-radius: 12px; padding: 10px 14px; font-size: 14px; margin: 0 0 20px; }
+.static-note a, .drop a { color: var(--accent); }
+.drop.disabled { cursor: default; opacity: 0.7; border-style: solid; }
+.verdict { margin-left: 6px; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 99px; letter-spacing: 0.04em; }
+.verdict.ok { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+.verdict.bad { background: color-mix(in srgb, #dc2626 15%, transparent); color: #dc2626; }

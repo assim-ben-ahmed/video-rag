@@ -73,18 +73,20 @@ first run downloads the Whisper model (~460 MB for `small`; set `WHISPER_MODEL=b
 ```bash
 python scripts/make_demo_video.py   # regenerate the demo video and its questions (Windows voice via pyttsx3)
 python scripts/evaluate.py          # run the 19 questions in every mode -> reports/
-python scripts/build_static_demo.py # refresh the GitHub Pages demo in docs/
+python scripts/build_static_demo.py # refresh the recorded demo in web/demo/
 pytest                              # 21 offline tests, no key or network needed
 ```
 
 Or with Docker: `docker build -t video-rag . && docker run -p 7860:7860 --env-file .env video-rag`, then open
 http://localhost:7860.
 
-## Demo page
+## Demo on GitHub Pages
 
-[`docs/`](docs/) is a static page served by GitHub Pages: the demo video, its keyframes and transcript, and the 57
-answers (19 questions × 3 modes) recorded from the real pipeline, with their evidence and agent traces. Rebuild it
-with `python scripts/build_static_demo.py` (free after `evaluate.py`, every response comes from the cache).
+The web interface in `web/` is published to GitHub Pages by `.github/workflows/pages.yml`. With no Python server
+behind it, the app switches to a recorded mode: it opens the demo video and replays the 57 answers (19 questions × 3
+modes) recorded from the real pipeline, with their evidence and agent traces; uploads and free questions need the
+app running locally. The recorded data lives in `web/demo/` and is rebuilt with `python scripts/build_static_demo.py`
+(free after `evaluate.py`: every response comes from the cache).
 
 ## Deploying the live app
 
@@ -119,11 +121,11 @@ video ─┬─ ffmpeg → 16 kHz audio → faster-whisper (local) → segments 
 ```
 videorag/       config, llm (Mistral client, cache, retries), media (audio, keyframes), transcribe,
                 index (hybrid search), ingest (pipeline), answer (3 modes, agent tools), app (FastAPI)
-web/            the interface (plain HTML/CSS/JS, no build step)
+web/            the interface (plain HTML/CSS/JS, no build step); web/demo/ = recorded answers for GitHub Pages
 scripts/        make_demo_video.py, evaluate.py
 demo/           the generated demo video, its timeline and the 19 questions
 reports/        evaluation results
-docs/           the static demo page (GitHub Pages) and screenshots
+docs/           screenshots
 tests/          offline tests (fake embedder, scripted LLM, generated test video)
 ```
 

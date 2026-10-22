@@ -1,4 +1,4 @@
-"""Builds the static GitHub Pages demo in docs/: the demo video, its keyframes and every recorded answer.
+"""Builds the recorded demo used by the web app when no server is running (GitHub Pages): web/demo/.
 
     python scripts/build_static_demo.py
 
@@ -21,7 +21,7 @@ from videorag.index import VideoIndex  # noqa: E402
 from videorag.llm import from_settings  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-DEMO, DOCS = ROOT / "demo", ROOT / "docs"
+DEMO, OUT = ROOT / "demo", ROOT / "web" / "demo"
 
 
 def main() -> None:
@@ -45,14 +45,15 @@ def main() -> None:
                 print(f"note: q{q['id']} {mode} differs from the evaluation run (cache miss)")
             answers[f"{q['id']}:{mode}"] = a
 
-    DOCS.mkdir(exist_ok=True)
-    shutil.copy(DEMO / "rooftop-bees.mp4", DOCS / "rooftop-bees.mp4")
-    frames = DOCS / "frames"
+    OUT.mkdir(parents=True, exist_ok=True)
+    shutil.copy(DEMO / "rooftop-bees.mp4", OUT / "rooftop-bees.mp4")
+    frames = OUT / "frames"
     shutil.rmtree(frames, ignore_errors=True)
     shutil.copytree(index_dir / "frames", frames)
     data = {
         "video": "rooftop-bees.mp4",
         "duration": manifest["duration"],
+        "language": manifest["language"],
         "keyframes": manifest["keyframes"],
         "segments": manifest["segments"],
         "questions": questions,
@@ -60,8 +61,8 @@ def main() -> None:
         "summary": metrics["summary"],
         "meta": metrics["meta"],
     }
-    (DOCS / "demo-data.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-    print(f"docs/demo-data.json: {len(answers)} answers, API calls this run: {llm.stats['api_calls']} (cache hits {llm.stats['cache_hits']})")
+    (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    print(f"web/demo/data.json: {len(answers)} answers, API calls this run: {llm.stats['api_calls']} (cache hits {llm.stats['cache_hits']})")
 
 
 if __name__ == "__main__":
