@@ -1,15 +1,6 @@
----
-title: Video RAG
-emoji: 🎬
-colorFrom: indigo
-colorTo: yellow
-sdk: docker
-app_port: 7860
-pinned: false
-short_description: Ask questions about a video; answers cite the moment
----
-
 # Video RAG
+
+**[Try the demo →](https://assim-ben-ahmed.github.io/video-rag/)** (recorded answers on the demo video; run it locally to use your own videos)
 
 Ask questions about a video and get answers that point to the exact moment. Speech is transcribed locally with
 Whisper, every visual change becomes a described keyframe, and three answering strategies can be compared side by
@@ -82,19 +73,25 @@ first run downloads the Whisper model (~460 MB for `small`; set `WHISPER_MODEL=b
 ```bash
 python scripts/make_demo_video.py   # regenerate the demo video and its questions (Windows voice via pyttsx3)
 python scripts/evaluate.py          # run the 19 questions in every mode -> reports/
+python scripts/build_static_demo.py # refresh the GitHub Pages demo in docs/
 pytest                              # 21 offline tests, no key or network needed
 ```
 
 Or with Docker: `docker build -t video-rag . && docker run -p 7860:7860 --env-file .env video-rag`, then open
 http://localhost:7860.
 
-## Live demo (Hugging Face Space)
+## Demo page
 
-The Dockerfile and the header at the top of this README are a ready-made Hugging Face Space (free CPU tier). The
-demo video ships with its index prebuilt, so it opens instantly; the Whisper model is downloaded at build time.
-The Space runs with `PUBLIC_MODE=1`: uploads are limited to 3 minutes and 100 MB, one video is processed at a time,
-and each visitor can ask 40 questions per hour, so a public link cannot drain the API quota. The Mistral key is a
-Space secret, never in the code.
+[`docs/`](docs/) is a static page served by GitHub Pages: the demo video, its keyframes and transcript, and the 57
+answers (19 questions × 3 modes) recorded from the real pipeline, with their evidence and agent traces. Rebuild it
+with `python scripts/build_static_demo.py` (free after `evaluate.py`, every response comes from the cache).
+
+## Deploying the live app
+
+The Docker image is ready for a public host (it listens on port 7860). With `PUBLIC_MODE=1` (set in the Dockerfile),
+uploads are limited to 3 minutes and 100 MB, one video is processed at a time and each visitor can ask 40 questions
+per hour, so a public link cannot drain the API quota. The demo video ships with its index prebuilt and opens
+instantly; the Whisper model is downloaded at build time. Pass `MISTRAL_API_KEY` as a secret, never in the image.
 
 ## How it works
 
@@ -126,6 +123,7 @@ web/            the interface (plain HTML/CSS/JS, no build step)
 scripts/        make_demo_video.py, evaluate.py
 demo/           the generated demo video, its timeline and the 19 questions
 reports/        evaluation results
+docs/           the static demo page (GitHub Pages) and screenshots
 tests/          offline tests (fake embedder, scripted LLM, generated test video)
 ```
 
