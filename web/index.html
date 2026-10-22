@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video RAG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><span class="logo" aria-hidden="true">▶</span> Video RAG</div>
+  <span id="health" class="health" title="API status">checking…</span>
+</header>
+
+<main>
+  <!-- 1. pick a video -->
+  <section id="start" class="start">
+    <h1>Ask questions about a video.<br><span>Get answers that point to the exact moment.</span></h1>
+    <p class="sub">Speech is transcribed locally with Whisper, every visual change becomes a described keyframe, and the
+      answer cites timestamps you can click.</p>
+    <div class="pick">
+      <label id="drop" class="drop" tabindex="0">
+        <input id="file" type="file" accept="video/*" hidden>
+        <strong>Upload a video</strong>
+        <span>MP4, MOV, MKV or WebM · up to 500 MB · or drop it here</span>
+      </label>
+      <button id="demo" class="btn primary" type="button">Try the demo video</button>
+    </div>
+    <div class="modes-explain">
+      <div><b>Simple</b><span>Transcript only: the classic text RAG.</span></div>
+      <div><b>Multimodal</b><span>One search over speech and on-screen descriptions.</span></div>
+      <div><b>Agentic</b><span>Decides what to search, and can look at a frame up close.</span></div>
+    </div>
+  </section>
+
+  <!-- 2. processing -->
+  <section id="processing" class="processing" hidden>
+    <h2 id="proc-title">Processing</h2>
+    <div class="progress"><i id="proc-bar"></i></div>
+    <ol id="steps" class="steps">
+      <li data-stage="audio">Extract the audio</li>
+      <li data-stage="transcribe">Transcribe the speech (Whisper, on this machine)</li>
+      <li data-stage="keyframes">Find keyframes</li>
+      <li data-stage="vision">Describe each keyframe</li>
+      <li data-stage="index">Build the search index</li>
+    </ol>
+    <p id="proc-msg" class="muted"></p>
+  </section>
+
+  <!-- 3. chat -->
+  <section id="workspace" class="workspace" hidden>
+    <div class="left">
+      <video id="player" controls playsinline preload="metadata"></video>
+      <div class="meta" id="vmeta"></div>
+      <h3>Keyframes</h3>
+      <div id="frames" class="frames"></div>
+      <details class="transcript">
+        <summary>Transcript</summary>
+        <div id="transcript"></div>
+      </details>
+      <button id="another" class="btn ghost" type="button">← Another video</button>
+    </div>
+
+    <div class="right">
+      <div class="modes" role="radiogroup" aria-label="Answering mode">
+        <button type="button" role="radio" data-mode="simple">Simple</button>
+        <button type="button" role="radio" data-mode="multimodal">Multimodal</button>
+        <button type="button" role="radio" data-mode="agentic" aria-checked="true">Agentic</button>
+        <button type="button" role="radio" data-mode="compare">Compare</button>
+      </div>
+      <div id="chat" class="chat" aria-live="polite"></div>
+      <div id="suggest" class="suggest"></div>
+      <form id="ask" class="ask">
+        <input id="q" type="text" placeholder="Ask about the video…" autocomplete="off" maxlength="500" aria-label="Your question">
+        <button class="btn primary" type="submit">Ask</button>
+      </form>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

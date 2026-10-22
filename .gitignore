@@ -1,0 +1,21 @@
+# secrets
+.env
+
+# runtime data: uploads, indexes, API cache
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.claude/
+CLAUDE.md

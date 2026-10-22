@@ -1,0 +1,922 @@
+{
+ "meta": {
+  "video_seconds": 90.49,
+  "speech_chunks": 7,
+  "keyframes": 8,
+  "ingest_seconds": 41.8,
+  "chat_model": "ministral-14b-latest",
+  "vision_model": "ministral-14b-latest",
+  "embed_model": "mistral-embed",
+  "whisper_model": "small"
+ },
+ "summary": {
+  "simple": {
+   "speech": {
+    "n": 8,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.81
+   },
+   "screen": {
+    "n": 8,
+    "accuracy": 0.0,
+    "cited_right_moment": 0.25,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.8
+   },
+   "both": {
+    "n": 3,
+    "accuracy": 0.0,
+    "cited_right_moment": 0.667,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.67
+   },
+   "all": {
+    "n": 19,
+    "accuracy": 0.421,
+    "cited_right_moment": 0.632,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.78
+   }
+  },
+  "multimodal": {
+   "speech": {
+    "n": 8,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.71
+   },
+   "screen": {
+    "n": 8,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.94
+   },
+   "both": {
+    "n": 3,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 1.19
+   },
+   "all": {
+    "n": 19,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 2.0,
+    "median_latency_s": 0.76
+   }
+  },
+  "agentic": {
+   "speech": {
+    "n": 8,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 4.0,
+    "median_latency_s": 1.42
+   },
+   "screen": {
+    "n": 8,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 4.38,
+    "median_latency_s": 2.49
+   },
+   "both": {
+    "n": 3,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 5.33,
+    "median_latency_s": 2.54
+   },
+   "all": {
+    "n": 19,
+    "accuracy": 1.0,
+    "cited_right_moment": 1.0,
+    "evidence_hit": 1.0,
+    "avg_llm_calls": 4.37,
+    "median_latency_s": 1.77
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": 1,
+   "question": "When was the first hive installed?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.37,
+   "tools": [],
+   "answer": "The first hive was installed on the roof of the city library in the **spring of 2019** [00:12–00:28]."
+  },
+  {
+   "id": 1,
+   "question": "When was the first hive installed?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.71,
+   "tools": [],
+   "answer": "The first hive was installed in the **spring of 2019** [00:12–00:24]."
+  },
+  {
+   "id": 1,
+   "question": "When was the first hive installed?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.77,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The first hive was installed in the **spring of 2019** on the roof of the city library, as stated in the speech at [00:00–00:19] and [00:12–00:28]."
+  },
+  {
+   "id": 2,
+   "question": "On which building was the first hive installed?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.58,
+   "tools": [],
+   "answer": "The first hive was installed on the roof of the **city library** [00:12–00:28]."
+  },
+  {
+   "id": 2,
+   "question": "On which building was the first hive installed?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.6,
+   "tools": [],
+   "answer": "The first hive was installed on the roof of the **city library** [00:12–00:24]."
+  },
+  {
+   "id": 2,
+   "question": "On which building was the first hive installed?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.77,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The first hive was installed on the **roof of the city library** in the spring of 2019, as stated in the speech at [00:00–00:19] and [00:12–00:28]."
+  },
+  {
+   "id": 3,
+   "question": "How many eggs can the queen lay per day?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.86,
+   "tools": [],
+   "answer": "According to the video, the queen can lay **up to 2000 eggs a day** at the height of the season, as stated at **[00:25–00:43]**."
+  },
+  {
+   "id": 3,
+   "question": "How many eggs can the queen lay per day?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.81,
+   "tools": [],
+   "answer": "According to the evidence, the queen can lay **up to 2,000 eggs a day** at the height of the season, as stated in the speech at **[00:25–00:43]**."
+  },
+  {
+   "id": 3,
+   "question": "How many eggs can the queen lay per day?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.39,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "According to the video, the queen can lay **up to 2000 eggs per day** at the height of the season, as stated in the speech at **[00:25–00:43]**."
+  },
+  {
+   "id": 4,
+   "question": "What should you do if you get stung?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.81,
+   "tools": [],
+   "answer": "If you get stung, you should scrape the sting out with a fingernail, as pinching it pushes more venom in [00:38–00:56]."
+  },
+  {
+   "id": 4,
+   "question": "What should you do if you get stung?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.76,
+   "tools": [],
+   "answer": "If you get stung, you should **scrape the sting out with a fingernail**—never pinch it, as that pushes more venom in, according to the instructions given at **[00:52–00:56]**."
+  },
+  {
+   "id": 4,
+   "question": "What should you do if you get stung?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.42,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "If you get stung, you should **scrape the sting out with a fingernail** and **never pinch it**, as pinching pushes more venom in, according to the advice given at **[00:38–00:56]**."
+  },
+  {
+   "id": 5,
+   "question": "What does the association lend beginners for free?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.94,
+   "tools": [],
+   "answer": "According to the video, the association lends beginners a **smoker for free** during their first year [00:53–01:13]."
+  },
+  {
+   "id": 5,
+   "question": "What does the association lend beginners for free?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.75,
+   "tools": [],
+   "answer": "According to the evidence, the association lends beginners a **smoker for free** during their first year, as stated at **[00:53–01:13]**."
+  },
+  {
+   "id": 5,
+   "question": "What does the association lend beginners for free?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 2.25,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "According to the video, the association lends beginners a **smoker for free** during their first year [00:53–01:13]. This is explicitly mentioned in the speech, though the screen does not list it as free."
+  },
+  {
+   "id": 6,
+   "question": "What breed is the queen?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.5,
+   "tools": [],
+   "answer": "The queen in the video is a **Buckfast** breed, as stated at **[01:06–01:22]**."
+  },
+  {
+   "id": 6,
+   "question": "What breed is the queen?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.59,
+   "tools": [],
+   "answer": "The queen is a **Buckfast** breed, as explicitly stated in the evidence at **[00:53–01:13]**."
+  },
+  {
+   "id": 6,
+   "question": "What breed is the queen?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.35,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The queen is a **Buckfast breed**, as stated explicitly in the speech at **[00:53–01:13]**."
+  },
+  {
+   "id": 7,
+   "question": "How much honey was collected last year?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.55,
+   "tools": [],
+   "answer": "According to the video, **42 kg of honey** was collected last year, as stated at **[01:16–01:22]**."
+  },
+  {
+   "id": 7,
+   "question": "How much honey was collected last year?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.56,
+   "tools": [],
+   "answer": "According to the evidence, **42 kg of honey** was collected last year, as stated at **[1:12–1:29]**."
+  },
+  {
+   "id": 7,
+   "question": "How much honey was collected last year?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.35,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The amount of honey collected last year was **42 kg**, as stated in the speech at **[01:06–01:22]** and **[01:16–01:29]**. This is the only explicit mention of honey collection in the video."
+  },
+  {
+   "id": 8,
+   "question": "When does the next beginner session start?",
+   "modality": "speech",
+   "mode": "simple",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.73,
+   "tools": [],
+   "answer": "The next beginner session starts on **October 3rd**, as explicitly stated at **[01:26–01:29]**."
+  },
+  {
+   "id": 8,
+   "question": "When does the next beginner session start?",
+   "modality": "speech",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.61,
+   "tools": [],
+   "answer": "The next beginner session starts on **the 3rd of October**, as mentioned in the speech at **[01:16–01:29]**."
+  },
+  {
+   "id": 8,
+   "question": "When does the next beginner session start?",
+   "modality": "speech",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.13,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The next beginner session starts on **the 3rd of October**, as stated in the speech at [01:16–01:29]."
+  },
+  {
+   "id": 9,
+   "question": "How many hives are there on the roof?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.82,
+   "tools": [],
+   "answer": "I could not find the exact number of hives on the roof in the provided evidence. The video only mentions the first hive installed in 2019 and that the apiary has \"grown,\" but does not specify how many hives there are currently."
+  },
+  {
+   "id": 9,
+   "question": "How many hives are there on the roof?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.68,
+   "tools": [],
+   "answer": "According to the evidence, there are **6 hives** on the roof, as stated on the slide titled \"Our apiary\" at **[00:12–00:24]**."
+  },
+  {
+   "id": 9,
+   "question": "How many hives are there on the roof?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.0,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "There are **6 hives** on the roof, as shown on the slide at **[00:12–00:24]**."
+  },
+  {
+   "id": 10,
+   "question": "How high is the roof?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.41,
+   "tools": [],
+   "answer": "I could not find information about the height of the roof in the video."
+  },
+  {
+   "id": 10,
+   "question": "How high is the roof?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.62,
+   "tools": [],
+   "answer": "According to the evidence, the roof height is **[00:12–00:24] 24 meters**."
+  },
+  {
+   "id": 10,
+   "question": "How high is the roof?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.1,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The roof height is **24 meters**, as shown on the slide at **[00:12–00:24]**."
+  },
+  {
+   "id": 11,
+   "question": "In which month does the colony peak, and how many bees does it have then?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.8,
+   "tools": [],
+   "answer": "The video does not specify the exact month when the colony peaks, nor does it provide the number of bees at that time. The chart mentioned at [00:25–00:43] shows population trends but is not visible or detailed in the provided evidence."
+  },
+  {
+   "id": 11,
+   "question": "In which month does the colony peak, and how many bees does it have then?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.94,
+   "tools": [],
+   "answer": "According to the evidence, the colony peaks in **[00:24–00:38]** **June**, with a population of **60,000 bees**. This is shown in the bar chart where June is highlighted in orange and labeled with the exact number."
+  },
+  {
+   "id": 11,
+   "question": "In which month does the colony peak, and how many bees does it have then?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 4.65,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The colony peaks in **June** with **60,000 bees**, as shown by the highlighted bar in the chart at [00:24–00:38]."
+  },
+  {
+   "id": 12,
+   "question": "Below what temperature should the hive never be opened?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 2.74,
+   "tools": [],
+   "answer": "I could not find the specific temperature below which the hive should never be opened in the provided evidence."
+  },
+  {
+   "id": 12,
+   "question": "Below what temperature should the hive never be opened?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.7,
+   "tools": [],
+   "answer": "According to the video, the hive should never be opened below **[00:38–00:52]** **15 °C**."
+  },
+  {
+   "id": 12,
+   "question": "Below what temperature should the hive never be opened?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 7,
+   "latency_s": 5.34,
+   "tools": [
+    "search_speech",
+    "search_screen",
+    "look_at_frame",
+    "look_at_frame"
+   ],
+   "answer": "The hive should never be opened below **15 °C** [00:38]. This rule is explicitly stated in the safety guidelines shown on screen."
+  },
+  {
+   "id": 13,
+   "question": "How much does the bee suit cost?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.36,
+   "tools": [],
+   "answer": "I could not find the cost of the bee suit in the provided evidence."
+  },
+  {
+   "id": 13,
+   "question": "How much does the bee suit cost?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.29,
+   "tools": [],
+   "answer": "The bee suit costs **120 €**, as shown in the \"Beginner kit\" list at **[00:52–01:03]**."
+  },
+  {
+   "id": 13,
+   "question": "How much does the bee suit cost?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.68,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The bee suit costs **120 €**, as shown on the \"Beginner kit\" list at **[00:52–01:03]**."
+  },
+  {
+   "id": 14,
+   "question": "What colour is the mark on the queen?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.71,
+   "tools": [],
+   "answer": "I could not find any information about the color of a mark on the queen in the provided evidence."
+  },
+  {
+   "id": 14,
+   "question": "What colour is the mark on the queen?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 3.38,
+   "tools": [],
+   "answer": "The mark on the queen is **blue**, as shown in the slide titled \"Our queen\" at **[01:03–01:12]**, where the bee illustration has a blue dot on its thorax."
+  },
+  {
+   "id": 14,
+   "question": "What colour is the mark on the queen?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 32.22,
+   "tools": [
+    "search_screen",
+    "search_speech"
+   ],
+   "answer": "The mark on the queen is a **blue dot**, as shown in the illustration on the slide titled \"Our queen\" at **[01:03–01:12]**."
+  },
+  {
+   "id": 15,
+   "question": "What is the price of a jar of honey?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.39,
+   "tools": [],
+   "answer": "I could not find the price of a jar of honey in the video."
+  },
+  {
+   "id": 15,
+   "question": "What is the price of a jar of honey?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.76,
+   "tools": [],
+   "answer": "According to the evidence, the price of a jar of honey is **9 € for 250 grams** [01:12–01:21]."
+  },
+  {
+   "id": 15,
+   "question": "What is the price of a jar of honey?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 1.43,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "I could not find the price of a **jar of honey** in the speech transcript, but the screen shows the price as **9 € for 250 g** [1:12–1:21]."
+  },
+  {
+   "id": 16,
+   "question": "On which day are the workshops held?",
+   "modality": "screen",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.78,
+   "tools": [],
+   "answer": "The video does not specify the day of the week for the workshops, only that the **next beginner session starts on the 3rd of October** [01:16–01:29]."
+  },
+  {
+   "id": 16,
+   "question": "On which day are the workshops held?",
+   "modality": "screen",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.23,
+   "tools": [],
+   "answer": "The workshops are held **every Saturday** at 10:00, as stated in the slide shown at **[1:21–1:30]**."
+  },
+  {
+   "id": 16,
+   "question": "On which day are the workshops held?",
+   "modality": "screen",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 2.49,
+   "tools": [
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The workshops are held **every Saturday at 10:00**, as shown on the final slide of the presentation **[1:21–1:30]**."
+  },
+  {
+   "id": 17,
+   "question": "What is the total price of the four items in the beginner kit?",
+   "modality": "both",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": false,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.78,
+   "tools": [],
+   "answer": "I could not find the total price of the four items in the beginner kit in the provided evidence. Only the mention of the kit and a note about the smoker being free during the first year were included."
+  },
+  {
+   "id": 17,
+   "question": "What is the total price of the four items in the beginner kit?",
+   "modality": "both",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.19,
+   "tools": [],
+   "answer": "The total price of the four items in the beginner kit is **185 €**, calculated by adding the prices: **120 €** (Bee suit) + **35 €** (Smoker) + **12 €** (Hive tool) + **18 €** (Gloves) as shown at **[00:52–01:03]**."
+  },
+  {
+   "id": 17,
+   "question": "What is the total price of the four items in the beginner kit?",
+   "modality": "both",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 4,
+   "latency_s": 4.14,
+   "tools": [
+    "search_screen",
+    "search_speech"
+   ],
+   "answer": "The total price of the four items in the beginner kit is **185 €**, calculated as follows:\n- Bee suit: **120 €** [00:52–01:03]\n- Smoker: **35 €** [00:52–01:03]\n- Hive tool: **12 €** [00:52–01:03]\n- Gloves: **18 €** [00:52–01:03]\n**Total = 120 + 35 + 12 + 18 = 185 €**."
+  },
+  {
+   "id": 18,
+   "question": "Which breed is the queen, and in which year was she marked?",
+   "modality": "both",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.63,
+   "tools": [],
+   "answer": "The queen is a **Buckfast breed** [00:53–01:13], but the video does **not** mention the year she was marked."
+  },
+  {
+   "id": 18,
+   "question": "Which breed is the queen, and in which year was she marked?",
+   "modality": "both",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 1.35,
+   "tools": [],
+   "answer": "The queen is a **Buckfast breed** [00:53–01:13], and she was marked in **2024** [01:03–01:12]."
+  },
+  {
+   "id": 18,
+   "question": "Which breed is the queen, and in which year was she marked?",
+   "modality": "both",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 6,
+   "latency_s": 1.81,
+   "tools": [
+    "search_speech",
+    "search_screen",
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The queen is a **Buckfast breed**, as stated in the speech at **[00:53–01:13]**. She was marked in the year **2024**, as shown on the slide at **[01:03–01:12]**."
+  },
+  {
+   "id": 19,
+   "question": "In which month is the honey harvested, and how much does a jar cost?",
+   "modality": "both",
+   "mode": "simple",
+   "correct": false,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.67,
+   "tools": [],
+   "answer": "The honey is harvested in **late August** [01:06–01:22], but the video does **not provide** any information about the cost of a jar of honey."
+  },
+  {
+   "id": 19,
+   "question": "In which month is the honey harvested, and how much does a jar cost?",
+   "modality": "both",
+   "mode": "multimodal",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 2,
+   "latency_s": 0.8,
+   "tools": [],
+   "answer": "According to the video, honey is harvested in **late August** [01:06–01:22], and each jar costs **9 € for 250 g** [01:12–01:21]."
+  },
+  {
+   "id": 19,
+   "question": "In which month is the honey harvested, and how much does a jar cost?",
+   "modality": "both",
+   "mode": "agentic",
+   "correct": true,
+   "cited_right_moment": true,
+   "evidence_hit": true,
+   "llm_calls": 6,
+   "latency_s": 2.54,
+   "tools": [
+    "search_speech",
+    "search_screen",
+    "search_speech",
+    "search_screen"
+   ],
+   "answer": "The honey is harvested in **late August** [01:06–01:22]. A jar of honey costs **9 € for 250 grams** [01:12–01:21]."
+  }
+ ]
+}

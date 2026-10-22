@@ -1,0 +1,237 @@
+[
+ {
+  "id": 1,
+  "question": "When was the first hive installed?",
+  "expected": [
+   [
+    "2019"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 1
+ },
+ {
+  "id": 2,
+  "question": "On which building was the first hive installed?",
+  "expected": [
+   [
+    "library"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 1
+ },
+ {
+  "id": 3,
+  "question": "How many eggs can the queen lay per day?",
+  "expected": [
+   [
+    "2000",
+    "2,000",
+    "2 000",
+    "two thousand"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 2
+ },
+ {
+  "id": 4,
+  "question": "What should you do if you get stung?",
+  "expected": [
+   [
+    "scrape"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 3
+ },
+ {
+  "id": 5,
+  "question": "What does the association lend beginners for free?",
+  "expected": [
+   [
+    "smoker"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 4
+ },
+ {
+  "id": 6,
+  "question": "What breed is the queen?",
+  "expected": [
+   [
+    "buckfast"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 5
+ },
+ {
+  "id": 7,
+  "question": "How much honey was collected last year?",
+  "expected": [
+   [
+    "42",
+    "forty two",
+    "forty-two"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 6
+ },
+ {
+  "id": 8,
+  "question": "When does the next beginner session start?",
+  "expected": [
+   [
+    "october"
+   ]
+  ],
+  "modality": "speech",
+  "slide": 7
+ },
+ {
+  "id": 9,
+  "question": "How many hives are there on the roof?",
+  "expected": [
+   [
+    "6",
+    "six"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 1
+ },
+ {
+  "id": 10,
+  "question": "How high is the roof?",
+  "expected": [
+   [
+    "24"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 1
+ },
+ {
+  "id": 11,
+  "question": "In which month does the colony peak, and how many bees does it have then?",
+  "expected": [
+   [
+    "june"
+   ],
+   [
+    "60,000",
+    "60 000",
+    "60000",
+    "sixty thousand"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 2
+ },
+ {
+  "id": 12,
+  "question": "Below what temperature should the hive never be opened?",
+  "expected": [
+   [
+    "15"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 3
+ },
+ {
+  "id": 13,
+  "question": "How much does the bee suit cost?",
+  "expected": [
+   [
+    "120"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 4
+ },
+ {
+  "id": 14,
+  "question": "What colour is the mark on the queen?",
+  "expected": [
+   [
+    "blue"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 5
+ },
+ {
+  "id": 15,
+  "question": "What is the price of a jar of honey?",
+  "expected": [
+   [
+    "9 €",
+    "9€",
+    "9 euro",
+    "€9",
+    "nine"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 6
+ },
+ {
+  "id": 16,
+  "question": "On which day are the workshops held?",
+  "expected": [
+   [
+    "saturday"
+   ]
+  ],
+  "modality": "screen",
+  "slide": 7
+ },
+ {
+  "id": 17,
+  "question": "What is the total price of the four items in the beginner kit?",
+  "expected": [
+   [
+    "185"
+   ]
+  ],
+  "modality": "both",
+  "slide": 4
+ },
+ {
+  "id": 18,
+  "question": "Which breed is the queen, and in which year was she marked?",
+  "expected": [
+   [
+    "buckfast"
+   ],
+   [
+    "2024"
+   ]
+  ],
+  "modality": "both",
+  "slide": 5
+ },
+ {
+  "id": 19,
+  "question": "In which month is the honey harvested, and how much does a jar cost?",
+  "expected": [
+   [
+    "august"
+   ],
+   [
+    "9 €",
+    "9€",
+    "9 euro",
+    "€9",
+    "nine"
+   ]
+  ],
+  "modality": "both",
+  "slide": 6
+ }
+]
