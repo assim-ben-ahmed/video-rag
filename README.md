@@ -1,3 +1,14 @@
+---
+title: Video RAG
+emoji: 🎬
+colorFrom: indigo
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: Ask questions about a video; answers cite the moment
+---
+
 # Video RAG
 
 Ask questions about a video and get answers that point to the exact moment. Speech is transcribed locally with
@@ -60,7 +71,7 @@ package, nothing else to install.
 
 ```bash
 python -m venv .venv && .venv\Scripts\activate      # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt                 # runtime + demo generator + tests
 copy .env.example .env                                # macOS/Linux: cp; then add MISTRAL_API_KEY
 uvicorn videorag.app:app --port 8000
 ```
@@ -71,10 +82,19 @@ first run downloads the Whisper model (~460 MB for `small`; set `WHISPER_MODEL=b
 ```bash
 python scripts/make_demo_video.py   # regenerate the demo video and its questions (Windows voice via pyttsx3)
 python scripts/evaluate.py          # run the 19 questions in every mode -> reports/
-pytest                              # 19 offline tests, no key or network needed
+pytest                              # 21 offline tests, no key or network needed
 ```
 
-Or with Docker: `docker build -t video-rag . && docker run -p 8000:8000 --env-file .env video-rag`
+Or with Docker: `docker build -t video-rag . && docker run -p 7860:7860 --env-file .env video-rag`, then open
+http://localhost:7860.
+
+## Live demo (Hugging Face Space)
+
+The Dockerfile and the header at the top of this README are a ready-made Hugging Face Space (free CPU tier). The
+demo video ships with its index prebuilt, so it opens instantly; the Whisper model is downloaded at build time.
+The Space runs with `PUBLIC_MODE=1`: uploads are limited to 3 minutes and 100 MB, one video is processed at a time,
+and each visitor can ask 40 questions per hour, so a public link cannot drain the API quota. The Mistral key is a
+Space secret, never in the code.
 
 ## How it works
 

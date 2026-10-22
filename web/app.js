@@ -48,6 +48,9 @@ api('/api/health').then((h) => {
   const el = $('#health');
   el.textContent = h.key_configured ? `Mistral · ${h.chat_model}` : 'No API key: add MISTRAL_API_KEY to .env';
   el.className = `health ${h.key_configured ? 'ok' : 'bad'}`;
+  const limits = [h.max_video_seconds ? `up to ${Math.round(h.max_video_seconds / 60)} min` : null, `${h.max_upload_mb} MB max`].filter(Boolean).join(' · ');
+  $('#drop span').textContent = `MP4, MOV, MKV or WebM · ${limits} · or drop it here`;
+  if (h.public_mode) $('#demo').textContent = 'Try the demo video (instant)';
 }).catch(() => { $('#health').textContent = 'API offline'; $('#health').className = 'health bad'; });
 
 // ── pick a video ──

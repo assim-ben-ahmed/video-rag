@@ -1,0 +1,4 @@
+-r requirements.txt
+# demo video generation and tests
+pyttsx3>=2.90
+pytest>=8.0

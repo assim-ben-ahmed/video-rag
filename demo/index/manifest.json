@@ -1,0 +1,143 @@
+{
+ "video": "rooftop-bees.mp4",
+ "duration": 90.49,
+ "language": "en",
+ "segments": [
+  {
+   "start": 0.37,
+   "end": 4.43,
+   "text": "Welcome to this short briefing on rooftop beekeeping."
+  },
+  {
+   "start": 4.43,
+   "end": 8.63,
+   "text": "In the next few minutes I will explain how our rooftop apiary works and what you need"
+  },
+  {
+   "start": 8.63,
+   "end": 12.08,
+   "text": "to get started."
+  },
+  {
+   "start": 12.08,
+   "end": 18.64,
+   "text": "We installed our very first hive on the roof of the city library in the spring of 2019."
+  },
+  {
+   "start": 18.64,
+   "end": 24.52,
+   "text": "Since then the apiary has grown, as you can see on this slide."
+  },
+  {
+   "start": 24.52,
+   "end": 27.6,
+   "text": "A colony changes a lot during the year."
+  },
+  {
+   "start": 27.6,
+   "end": 32.44,
+   "text": "At the height of the season, the queen can lay up to 2000 eggs a day."
+  },
+  {
+   "start": 32.44,
+   "end": 38.42,
+   "text": "The chart shows how the population evolves month by month."
+  },
+  {
+   "start": 38.42,
+   "end": 42.9,
+   "text": "Safety comes first, and the rules on this slide are not optional."
+  },
+  {
+   "start": 42.9,
+   "end": 47.42,
+   "text": "And if you do get stung, scrape the sting out with a fingernail."
+  },
+  {
+   "start": 47.42,
+   "end": 52.93,
+   "text": "Never pinch it, because that pushes more venom in."
+  },
+  {
+   "start": 52.93,
+   "end": 55.69,
+   "text": "Here is what the beginner kit costs."
+  },
+  {
+   "start": 55.69,
+   "end": 63.16,
+   "text": "Good news, during your first year, the association lends you a smoker for free."
+  },
+  {
+   "start": 63.16,
+   "end": 66.08,
+   "text": "Our current queen is a Buckfast queen."
+  },
+  {
+   "start": 66.08,
+   "end": 72.72,
+   "text": "She came from a breeder in Brittany, and she is calm and very productive."
+  },
+  {
+   "start": 72.72,
+   "end": 76.36,
+   "text": "We harvest once a year, in late August."
+  },
+  {
+   "start": 76.36,
+   "end": 81.8,
+   "text": "Last year we collected about 42 kg of honey."
+  },
+  {
+   "start": 81.8,
+   "end": 83.88,
+   "text": "Thank you for watching."
+  },
+  {
+   "start": 83.88,
+   "end": 87.52,
+   "text": "The next beginner session starts on the 3rd of October."
+  },
+  {
+   "start": 87.52,
+   "end": 88.96,
+   "text": "We hope to see you on the roof."
+  }
+ ],
+ "speech_chunks": 7,
+ "keyframes": [
+  {
+   "time": 0.0,
+   "file": "kf_000_00000000.jpg"
+  },
+  {
+   "time": 12.0,
+   "file": "kf_001_00012000.jpg"
+  },
+  {
+   "time": 24.0,
+   "file": "kf_002_00024000.jpg"
+  },
+  {
+   "time": 38.0,
+   "file": "kf_003_00038000.jpg"
+  },
+  {
+   "time": 52.0,
+   "file": "kf_004_00052000.jpg"
+  },
+  {
+   "time": 63.0,
+   "file": "kf_005_00063000.jpg"
+  },
+  {
+   "time": 72.0,
+   "file": "kf_006_00072000.jpg"
+  },
+  {
+   "time": 81.0,
+   "file": "kf_007_00081000.jpg"
+  }
+ ],
+ "ingest_seconds": 41.8
+}

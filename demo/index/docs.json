@@ -1,0 +1,122 @@
+[
+ {
+  "id": "s0",
+  "kind": "speech",
+  "start": 0.37,
+  "end": 18.64,
+  "text": "Welcome to this short briefing on rooftop beekeeping. In the next few minutes I will explain how our rooftop apiary works and what you need to get started. We installed our very first hive on the roof of the city library in the spring of 2019.",
+  "frame": null
+ },
+ {
+  "id": "s1",
+  "kind": "speech",
+  "start": 12.08,
+  "end": 27.6,
+  "text": "We installed our very first hive on the roof of the city library in the spring of 2019. Since then the apiary has grown, as you can see on this slide. A colony changes a lot during the year.",
+  "frame": null
+ },
+ {
+  "id": "s2",
+  "kind": "speech",
+  "start": 24.52,
+  "end": 42.9,
+  "text": "A colony changes a lot during the year. At the height of the season, the queen can lay up to 2000 eggs a day. The chart shows how the population evolves month by month. Safety comes first, and the rules on this slide are not optional.",
+  "frame": null
+ },
+ {
+  "id": "s3",
+  "kind": "speech",
+  "start": 38.42,
+  "end": 55.69,
+  "text": "Safety comes first, and the rules on this slide are not optional. And if you do get stung, scrape the sting out with a fingernail. Never pinch it, because that pushes more venom in. Here is what the beginner kit costs.",
+  "frame": null
+ },
+ {
+  "id": "s4",
+  "kind": "speech",
+  "start": 52.93,
+  "end": 72.72,
+  "text": "Here is what the beginner kit costs. Good news, during your first year, the association lends you a smoker for free. Our current queen is a Buckfast queen. She came from a breeder in Brittany, and she is calm and very productive.",
+  "frame": null
+ },
+ {
+  "id": "s5",
+  "kind": "speech",
+  "start": 66.08,
+  "end": 81.8,
+  "text": "She came from a breeder in Brittany, and she is calm and very productive. We harvest once a year, in late August. Last year we collected about 42 kg of honey.",
+  "frame": null
+ },
+ {
+  "id": "s6",
+  "kind": "speech",
+  "start": 76.36,
+  "end": 88.96,
+  "text": "Last year we collected about 42 kg of honey. Thank you for watching. The next beginner session starts on the 3rd of October. We hope to see you on the roof.",
+  "frame": null
+ },
+ {
+  "id": "v0",
+  "kind": "screen",
+  "start": 0.0,
+  "end": 12.0,
+  "text": "The image shows a title slide for a presentation on \"Rooftop Beekeeping.\" Visible text includes \"Rooftop Beekeeping\" in large white letters, followed by \"A beginner briefing\" in smaller orange text. There is also a logo consisting of three interconnected orange hexagons on the right side. At the bottom, it reads \"Rooftop Bees \u00b7 beginner briefing.\" The background is black with a thin yellow-orange horizontal line at the top.",
+  "frame": "kf_000_00000000.jpg"
+ },
+ {
+  "id": "v1",
+  "kind": "screen",
+  "start": 12.0,
+  "end": 24.0,
+  "text": "The image shows a slide titled \"Our apiary\" with a black background and yellow text. It lists \"Number of hives: 6,\" \"Roof height: 24 m,\" and \"Open to members only.\" The slide also includes a small text at the bottom that reads \"Rooftop Bees \u00b7 beginner briefing.\" The text is in a simple, clean font with yellow bullet points.",
+  "frame": "kf_001_00012000.jpg"
+ },
+ {
+  "id": "v2",
+  "kind": "screen",
+  "start": 24.0,
+  "end": 38.0,
+  "text": "The image shows a bar chart titled \"A colony through the year\" with the subtitle \"Bees per colony (thousands).\" The chart displays the number of bees in a colony from March to October, with the following values: March (lowest bar), April (slightly higher), May (higher), June (highest bar highlighted in orange labeled \"June: 60,000 bees\"), July (second highest in green), August (moderate height), September (lower), and October (lowest again).\n\nThe colors used in the chart are green for the bars and orange for the June bar. The chart is part of a \"Rooftop Bees - beginner briefing.\"",
+  "frame": "kf_002_00024000.jpg"
+ },
+ {
+  "id": "v3",
+  "kind": "screen",
+  "start": 38.0,
+  "end": 52.0,
+  "text": "The image shows a slide titled \"Safety rules\" with a black background and yellow text. The slide lists three safety rules: \"Always wear the full suit,\" \"Light the smoker before opening,\" and \"Never open the hive below 15 \u00b0C.\" The slide is part of a \"Rooftop Bees - beginner briefing.\" The text is in white and yellow dots are used as bullet points.",
+  "frame": "kf_003_00038000.jpg"
+ },
+ {
+  "id": "v4",
+  "kind": "screen",
+  "start": 52.0,
+  "end": 63.0,
+  "text": "The image shows a \"Beginner kit\" list with items and their prices. The items include a **Bee suit** for **120 \u20ac**, a **Smoker** for **35 \u20ac**, a **Hive tool** for **12 \u20ac**, and **Gloves** for **18 \u20ac**. The text is written in white and yellow on a black background, with the yellow highlighting the prices. The bottom text reads \"Rooftop Bees \u00b7 beginner briefing.\"",
+  "frame": "kf_004_00052000.jpg"
+ },
+ {
+  "id": "v5",
+  "kind": "screen",
+  "start": 63.0,
+  "end": 72.0,
+  "text": "The image shows a slide titled \"Our queen.\" It features an illustration of a bee with a blue dot on its thorax. The text reads \"Queen marked with a blue dot (2024).\" The slide is part of a \"Rooftop Bees - beginner briefing.\" The bee has yellow and black stripes and brown markings on its legs and abdomen.",
+  "frame": "kf_005_00063000.jpg"
+ },
+ {
+  "id": "v6",
+  "kind": "screen",
+  "start": 72.0,
+  "end": 81.0,
+  "text": "The image shows three orange jars with brown lids labeled under the heading \"The harvest.\" The text on the right side reads \"Jar price: 9 \u20ac / 250 g.\" The background is black, and the bottom left corner includes the text \"Rooftop Bees \u00b7 beginner briefing.\"\n\nColours: orange (jars), brown (jar lids), black (background), yellow (text color). Objects: three identical jars.",
+  "frame": "kf_006_00072000.jpg"
+ },
+ {
+  "id": "v7",
+  "kind": "screen",
+  "start": 81.0,
+  "end": 90.49,
+  "text": "The image shows a black background slide with white and yellow text. It reads:\n- \"Join us\"\n- A yellow dot followed by \"Workshops every Saturday at 10:00\"\n- A yellow dot followed by \"Contact: bees@rooftop.example\"\n- At the bottom, it states \"Rooftop Bees \u00b7 beginner briefing\" in smaller white text.\n\nThe slide has a thin yellow horizontal line at the top.",
+  "frame": "kf_007_00081000.jpg"
+ }
+]
